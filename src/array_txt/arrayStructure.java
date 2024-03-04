@@ -4,16 +4,16 @@ import java.util.*;
 
 public class arrayStructure {
 
-    static int[][] numArray = {{1,2,3,4}, {1,2,3,4,}};
+//    static int[][] numArray = {{1,2,3,4}, {1,2,3,4,}};
 
-    static void showArray(){
-        for (int[] ints : numArray) {
-            for (int j = 0; j < ints.length; j++) {
-
-                System.out.println(ints[j]);
-            }
-        }
-    }
+//    static void showArray(){
+//        for (int[] ints : numArray) {
+//            for (int j = 0; j < ints.length; j++) {
+//
+//                System.out.println(ints[j]);
+//            }
+//        }
+//    }
 
     static void fillArray(Integer [] numbers){
         System.out.println(Arrays.toString(numbers));
@@ -24,7 +24,9 @@ public class arrayStructure {
             System.out.println(Arrays.toString(numbers));
         }
 
-        System.out.print("Ketik operasi yang diinginkan: ");
+        System.out.println("Ketik operasi yang diinginkan: ");
+        System.out.println("Total dari array = jumlah");
+        System.out.println("Membalikkan susunan dari array = reverse");
         input.nextLine();
         String choice = input.nextLine();
 
@@ -56,7 +58,7 @@ public class arrayStructure {
         System.out.println(Arrays.asList(numbers));
     }
 
-    static void sumArray(Integer numbers[]){
+    static void sumArray(Integer[] numbers){
         int sum = 0;
         for(int i = 0; i < numbers.length; i++){
             sum += numbers[i];
@@ -68,6 +70,8 @@ public class arrayStructure {
 
         System.out.print("Input panjang array (max 20): ");
         int nilai = input.nextInt();
+
+        System.out.println("Masukkan nilai pada array:");
 
         while (nilai > 20 || nilai <= 0 ){
             System.out.println("Nilai tidak sesuai");

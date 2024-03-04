@@ -3,10 +3,7 @@
 package array_txt;
 
 // import class
-import java.io.File; // File class
-import java.io.FileNotFoundException; // Handling error class
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.*;
 import java.util.Scanner; // Scanner untuk show isi text (membaca)
 
 public class txtFile {
@@ -115,9 +112,16 @@ public class txtFile {
             }
         }
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
         String fileName;
         // memanggil method
+        File dir = new File(source);
+        String[] list = dir.list();
+        System.out.println("Berikut list file dalam folder:");
+        for (String fileList : list) {
+            System.out.println(fileList);
+        }
+        System.out.println();
         Scanner input = new Scanner(System.in);
         System.out.println("Ketik operasi yang diinginkan:");
         System.out.println("Lihat isi file = read");
